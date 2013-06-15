@@ -30,6 +30,9 @@
 	    queue_js_file('vendor/bootstrap.min');
 	    queue_js_file('app');
 	    echo head_js(); ?>
+	    
+	<script type="text/javascript" src="//use.typekit.net/wht1oxi.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
@@ -38,7 +41,7 @@
         	<a href="<?php echo url(''); ?>">	            
 	            <h1><?php echo option('site_title'); ?></h1>
 	            <?php if (get_theme_option('Main Header Background')) : ?>
-	        		<img src="<?php echo get_theme_option('Main Header Background'); ?>" alt="<?php echo theme_logo(); ?>" />
+	        		<img src="./files/theme_uploads/<?php echo get_theme_option('Main Header Background'); ?>" alt="<?php echo theme_logo(); ?>" />
 		        <?php else : ?>
 		        	<img src="http://placehold.it/952x124" alt="Placeholder" />
 		        <?php endif; ?>

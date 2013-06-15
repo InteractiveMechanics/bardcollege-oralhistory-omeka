@@ -1,0 +1,81 @@
+/**
+ **  General Styling
+ **  ---------------
+ **/
+
+html, body {
+	height: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'proxima nova' !important;
+}
+
+
+/**
+ **  Common Styling
+ **  ---------------
+ **/
+ 
+.banner {
+	height: 124px;
+	margin-bottom: 18px;
+	position: relative;
+	}
+	.banner h1,
+	.banner h2 {
+		position: relative;
+		z-index: 99;
+		margin: 0 auto;
+		display: block;
+	}
+	.banner h1 {
+		width: 65%;
+		padding: 8px;
+		background: white;
+		background: rgba(255,255,255,.7);
+		font-family: 'proxima nova', sans-serif;
+		font-weight: 300;
+		font-size: 24px;
+		text-transform: uppercase;
+		text-align: center;
+		top: 34px;
+		color: black;
+	}
+	.banner h2 {
+		width: 100%;
+		font-family: 'proxima nova', sans-serif;
+		font-weight: 400;
+		font-size: 24px;
+		text-align: center;
+		color: #FFF;
+		top: 40px;
+	}
+	.banner img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		opacity: .65;
+		}
+		.banner:hover img {
+			opacity: 1;
+		}
+		.banner:hover a {
+			text-decoration: none;
+		}
+	
+	.banner.banner-home {
+		margin-top: 36px;
+		}
+		.banner.banner-home img {
+			opacity: 1;
+		}
+		
+
+footer > p {
+	font-family: 'proxima nova', sans-serif;
+	font-weight: 400;
+	font-size: 12px;
+}
+		
+		
+		
