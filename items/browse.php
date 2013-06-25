@@ -2,7 +2,7 @@
 $pageTitle = __('Browse Items');
 echo head(array('title'=>$pageTitle,'bodyclass' => 'items browse'));
 ?>
-
+<?php include(physical_path_to('common/nav.php')); ?>
 <h1><?php echo $pageTitle;?> <?php echo __('(%s total)', $total_results); ?></h1>
 
 <nav class="items-nav navigation secondary-nav">

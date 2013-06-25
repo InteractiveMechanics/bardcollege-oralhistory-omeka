@@ -37,13 +37,20 @@
 <?php echo body_tag(array('id' => @$bodyid, 'class' => @$bodyclass)); ?>
 <?php fire_plugin_hook('public_body', array('view'=>$this)); ?>
     <div class="container">
-        <header class="banner banner-home">
+    	<?php if (is_current_url('')) : ?>
+    		<header class="banner banner-home" style="background: url(<?php echo url('/'); ?>files/theme_uploads/<?php echo get_theme_option('Main Header Background'); ?>)">
+    	<?php elseif (is_current_url('/items')) : ?>
+    		<header class="banner banner-home" style="background: url(<?php echo url('/'); ?>files/theme_uploads/<?php echo get_theme_option('Interviews Header Background'); ?>)">
+    	<?php elseif (is_current_url('/about_the_project') || is_current_url('/about')) : ?>
+    		<header class="banner banner-home" style="background: url(<?php echo url('/'); ?>files/theme_uploads/<?php echo get_theme_option('About Header Background'); ?>)">
+    	<?php elseif (is_current_url('/the_course') || is_current_url('/students')) : ?>
+    		<header class="banner banner-home" style="background: url(<?php echo url('/'); ?>files/theme_uploads/<?php echo get_theme_option('Course Header Background'); ?>)">
+    	<?php elseif (is_current_url('/resources')) : ?>
+    		<header class="banner banner-home" style="background: url(<?php echo url('/'); ?>files/theme_uploads/<?php echo get_theme_option('Resources Header Background'); ?>)">
+    	<?php else : ?>
+    		<header class="banner banner-home">
+    	<?php endif; ?>
         	<a href="<?php echo url(''); ?>">	            
 	            <h1><?php echo option('site_title'); ?></h1>
-	            <?php if (get_theme_option('Main Header Background')) : ?>
-	        		<img src="./files/theme_uploads/<?php echo get_theme_option('Main Header Background'); ?>" alt="<?php echo theme_logo(); ?>" />
-		        <?php else : ?>
-		        	<img src="http://placehold.it/952x124" alt="Placeholder" />
-		        <?php endif; ?>
 			</a>
         </header>

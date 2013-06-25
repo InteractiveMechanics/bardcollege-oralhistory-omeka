@@ -3,6 +3,7 @@
     'bodyclass' => 'page simple-page',
     'bodyid' => metadata('simple_pages_page', 'slug')
 )); ?>
+<?php include(physical_path_to('common/nav.php')); ?>
 <div id="primary">
     <h1><?php echo metadata('simple_pages_page', 'title'); ?></h1>
     <?php
