@@ -31,6 +31,7 @@
 	<div class="download">
 		<?php echo files_for_item(); ?>
 	</div>
+
 	<?php endif; ?>
 </div>
 <?php echo foot(); ?>

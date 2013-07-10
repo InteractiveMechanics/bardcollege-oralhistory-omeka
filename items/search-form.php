@@ -22,7 +22,7 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
     <div id="search-narrow-by-fields" class="field">
-        <div class="label"><?php echo __('Narrow by Specific Fields'); ?></div>
+        <?php echo $this->formLabel('advanced-0-terms', __('Narrow by Specific Fields')); ?>
         <div class="inputs">
         <?php
         // If the form has been submitted, retain the number of search
@@ -75,17 +75,6 @@ $formAttributes['method'] = 'GET';
         <?php endforeach; ?>
         </div>
         <button type="button" class="add_search"><?php echo __('Add a Field'); ?></button>
-    </div>
-
-    <div id="search-by-range" class="field">
-        <?php echo $this->formLabel('range', __('Search by a range of ID#s (example: 1-4, 156, 79)')); ?>
-        <div class="inputs">
-        <?php
-            echo $this->formText('range', @$_GET['range'],
-                array('size' => '40')
-            );
-        ?>
-        </div>
     </div>
 
     <div class="field">
@@ -163,23 +152,6 @@ $formAttributes['method'] = 'GET';
         </div>
     </div>
     <?php endif; ?>
-
-    <div class="field">
-        <?php echo $this->formLabel('featured', __('Featured/Non-Featured')); ?>
-        <div class="inputs">
-        <?php
-            echo $this->formSelect(
-                'featured',
-                @$_REQUEST['featured'],
-                array(),
-                label_table_options(array(
-                    '1' => __('Only Featured Items'),
-                    '0' => __('Only Non-Featured Items')
-                ))
-            );
-        ?>
-        </div>
-    </div>
 
     <?php fire_plugin_hook('public_items_search', array('view' => $this)); ?>
     <div>

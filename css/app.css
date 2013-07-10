@@ -112,7 +112,8 @@ footer {
 			color: #333;
 		}
 		#sidebar .navigation > li.active > a {
-			
+			color: #333;
+			font-weight: bold;
 		}
 		#sidebar .navigation > li > ul {
 			margin: 0;
@@ -142,17 +143,20 @@ footer {
 			display: none;
 		}
 		#search-wrap input[type="text"] {
-			background: #E8E8E8;
+			background: #E8E8E8 url(../images/search-icon-small.png) 5px 5px no-repeat;
 			padding: 5px 8px;
 			width: 138px;
 			border: none;
 			border-radius: 0;
 			font-size: 11px;
+			position: relative;
+			text-indent: 20px;
 			}
 			#search-wrap input[type="text"]:focus {
 				box-shadow: none;
-				background: #EEE;
+				background: #EEE url(../images/search-icon-small.png) 5px 5px no-repeat;
 			}
+			
 		#search-wrap #advanced-form p {
 			font-size: 9px;
 			color: #555555;
@@ -254,10 +258,28 @@ footer {
 			color: #555;
 			background: transparent;
 		}
+		
+#download .download {
+	position: relative;
+	}
+	#download .download .download-file {
+		text-indent: 40px;
+		font-size: 12px;
+		line-height: 15px;
+		color: #555;
+		}
+		#download .download .download-file .download-icon {
+			background: url(../images/pdf_icon_small.gif) no-repeat;
+			width: 36px;
+			height: 36px;
+			display: block;
+			float: left;
+			padding-right: 10px;
+		}
 	
 #browse-by-name {}
 	#browse-by-name .item {
-		min-height: 60px: 
+		min-height: 60px;
 		margin-bottom: 27px;
 		}
 		#browse-by-name .item h2,
@@ -279,7 +301,76 @@ footer {
 		}	
 		
 #browse-by-tags {}
-	#browse-by-tags .popularity {}
+	#browse-by-tags .popularity {
+		list-style: none;
+		margin: 0;
+		}
+		#browse-by-tags .popularity li a {
+			float: left;
+			color: #999;
+			margin-right: 6px;
+			}
+			#browse-by-tags .popularity li a:hover {
+				color: #555;
+				text-decoration: none;
+			}
+			.popular a {
+                font-size:100%;
+                }
+            .v-popular a {
+                font-size:120%;
+                }
+            .vv-popular a {
+                font-size:140%;
+                }
+            .vvv-popular a {
+                font-size:160%;
+                }
+            .vvvv-popular a {
+                font-size:180%;
+                }
+            .vvvvv-popular a {
+                font-size:200%;
+                }
+            .vvvvvv-popular a {
+                font-size:220%;
+                }
+            .vvvvvvv-popular a {
+                font-size:240%;
+                }
+            .vvvvvvvv-popular a {
+                font-size:260%;
+                }
+
+#advanced-search-form {}
+	#advanced-search-form label {
+		font-size: 12px;
+		line-height: 15px;
+		color: #555;
+	}
+	#advanced-search-form select {
+		margin-bottom: 18px;
+		margin-right: 5px;
+	}
+	#advanced-search-form input[type="text"]{
+		margin-bottom: 18px;
+	}
+	#advanced-search-form input[type="submit"] {
+		margin-top: 18px;
+		border: #999 1px solid;
+		border-radius: 9px;
+		padding: 4px 8px;
+		background: white;
+		font-size: 12px;
+	}
+	#advanced-search-form .add_search {
+		margin-bottom: 18px;
+		border: #999 1px solid;
+		border-radius: 9px;
+		padding: 4px 8px;
+		background: white;
+		font-size: 12px;
+	}
 
 
 footer > p {

@@ -28,6 +28,7 @@
     <?php 
 	    queue_js_file('vendor/modernizr');
 	    queue_js_file('vendor/bootstrap.min');
+	    queue_js_url('http://code.jquery.com/jquery-1.10.2.min.js');
 	    queue_js_file('app');
 	    echo head_js(); ?>
 	    
