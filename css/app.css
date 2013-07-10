@@ -6,8 +6,8 @@
 html, body {
 	height: 100%;
 }
-h1, h2, h3, h4, h5, h6 {
-	font-family: 'proxima nova' !important;
+h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+	font-family: 'proxima nova', sans-serif;
 }
 
 
@@ -23,6 +23,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	#home .banner {
 		margin-bottom: 18px;
+	}
+	#home .banner.banner-about:last-child {
+		margin-bottom: 0;
 	}
 	.banner h1,
 	.banner h2 {
@@ -78,13 +81,211 @@ h1, h2, h3, h4, h5, h6 {
 		.banner.banner-home img {
 			opacity: 1;
 		}
+
+footer {
+	margin-top: 18px;
+}		
+
+#sidebar {
+	padding-right: 27px;
+	width: 148px;
+	}
+	#sidebar .navigation {
+		list-style: none;
+		margin: 0 0 18px;
+		}
+		#sidebar .navigation > li {
+			border-bottom: 1px solid #999999;
+		}
+		#sidebar .navigation > li > a {
+			padding: 12px 0;
+			font-size: 13px;
+			display: block;
+			color: #666;
+		}
+		#sidebar .navigation > li:first-child > a {
+			border-top: 1px solid #999999;
+		}
+		#sidebar .navigation > li > a:hover {
+			font-weight: bold;
+			text-decoration: none;
+			color: #333;
+		}
+		#sidebar .navigation > li.active > a {
+			
+		}
+		#sidebar .navigation > li > ul {
+			margin: 0;
+			list-style: none;
+			}
+			#sidebar .navigation > li > ul li a {
+				color: #999999;
+				font-size: 13px;
+				display: block;
+				margin-top: -10px;
+				margin-bottom: 10px;
+				}
+				#sidebar .navigation > li > ul li a:hover {
+					color: #555555;
+					font-weight: bold;
+					text-decoration: none;
+				}
+	
+	#query-types,
+	#record-types {
+		display: none;
+	}
+	#search-wrap {
 		
+		}
+		#search-wrap h2 {
+			display: none;
+		}
+		#search-wrap input[type="text"] {
+			background: #E8E8E8;
+			padding: 5px 8px;
+			width: 138px;
+			border: none;
+			border-radius: 0;
+			font-size: 11px;
+			}
+			#search-wrap input[type="text"]:focus {
+				box-shadow: none;
+				background: #EEE;
+			}
+		#search-wrap #advanced-form p {
+			font-size: 9px;
+			color: #555555;
+		}
+		#search-wrap input[type="submit"] {
+			display: none;
+		}
+	
+#content {
+	
+	}
+	#content h1 {
+		margin: 0 0 45px;
+		font-size: 40px;
+		color: #555555;
+		font-family: 'kepler-std-display', serif;
+		font-style: italic;
+		font-weight: 300;
+	}
+	#content .cols {
+		color: #555555;
+		font-size: 12px;
+		line-height: 15px;
+		-webkit-column-count: 2;
+		-moz-column-count: 2;
+		column-count: 2;
+		-webkit-column-gap: 18px;
+		-moz-column-gap: 18px;
+		column-gap: 18px;
+		}
+		#content p a {
+			font-weight: bold;
+			color: #555555;
+			}
+			#content p a:hover {
+				color: #363636;
+				text-decoration: none;
+			}
+	#content h3 {
+		font-size: 15px;
+		line-height: 18px;
+		color: #555;
+		font-family: 'proxima nova', sans-serif;
+		font-weight: 300;
+		margin: 0 0 6px;
+	}
+	#content .description {
+		margin-top: 21px;
+		font-size: 12px;
+		line-height: 15px;
+		color: #555;
+		font-family: 'proxima nova', sans-serif;
+		font-weight: 300;
+		margin-bottom: 21px;
+	}
+	#content .tag-list {
+		font-size: 12px;
+		line-height: 15px;
+		color: #999;
+		font-family: 'proxima nova', sans-serif;
+		}
+		#content .tag-list a {
+			color: #999;
+			font-weight: 700;
+		}
+	#content .interview {
+		font-size: 12px;
+		line-height: 15px;
+		color: #555;
+		font-family: 'proxima nova', sans-serif;
+		font-weight: 300;
+	}
+		
+	#content hr {
+		border-top: 1px solid #999;
+	}
+	
+#content .nav-tabs, .nav-pills {
+	margin-bottom: 27px;
+	}
+	#content .nav-pills > li > a {
+		font-size: 11px;
+		font-family: 'proxima nova', sans-serif;
+		font-weight: 300;
+		color: #999;
+		margin-right: 36px;
+		padding: 0;
+		}
+		#content .nav-pills > li > a:hover,
+		#content .nav-pills > li > a:focus {
+			font-weight: 700;
+			color: #555;
+			background: transparent;
+		}
+		#content .nav-pills > .active > a, 
+		#content .nav-pills > .active > a:hover, 
+		#content .nav-pills > .active > a:focus {
+			font-weight: 700;
+			color: #555;
+			background: transparent;
+		}
+	
+#browse-by-name {}
+	#browse-by-name .item {
+		min-height: 60px: 
+		margin-bottom: 27px;
+		}
+		#browse-by-name .item h2,
+		#browse-by-name .item h2 a {
+			margin: 0;
+			font-size: 24px;
+			color: #555555;
+			font-family: 'kepler-std-display', serif;
+			font-style: italic;
+			font-weight: 300;
+		}
+		#browse-by-name .item h4 {
+			margin: 0;
+			font-size: 10px;
+			line-height: 13px;
+			color: #555;
+			font-family: 'proxima nova', sans-serif;
+			font-weight: 300;
+		}	
+		
+#browse-by-tags {}
+	#browse-by-tags .popularity {}
+
 
 footer > p {
 	font-family: 'proxima nova', sans-serif;
 	font-weight: 400;
 	font-size: 12px;
-}
-		
+}		
 		
 		

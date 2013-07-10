@@ -4,11 +4,8 @@ echo head(array('title' => $pageTitle,
            'bodyclass' => 'items advanced-search'));
 ?>
 
+<?php include(physical_path_to('common/nav.php')); ?>
 <h1><?php echo $pageTitle; ?></h1>
-
-<nav class="items-nav navigation secondary-nav">
-    <?php echo public_nav_items(); ?>
-</nav>
 
 <?php echo $this->partial('items/search-form.php',
     array('formAttributes' =>

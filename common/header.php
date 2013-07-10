@@ -54,3 +54,4 @@
 	            <h1><?php echo option('site_title'); ?></h1>
 			</a>
         </header>
+        <div class="row">
