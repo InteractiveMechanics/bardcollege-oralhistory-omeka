@@ -7,7 +7,7 @@ html, body {
 	height: 100%;
 }
 h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-	font-family: 'proxima nova', sans-serif;
+	font-family: 'proxima-nova', sans-serif;
 }
 
 
@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
 		padding: 6px;
 		background: white;
 		background: rgba(255,255,255,.7);
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
 		font-size: 21px;
 		text-transform: uppercase;
@@ -49,7 +49,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
 	}
 	.banner h2 {
 		width: 100%;
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		font-weight: 400;
 		font-size: 24px;
 		text-align: center;
@@ -199,7 +199,7 @@ footer {
 		font-size: 15px;
 		line-height: 18px;
 		color: #555;
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
 		margin: 0 0 6px;
 	}
@@ -208,7 +208,7 @@ footer {
 		font-size: 12px;
 		line-height: 15px;
 		color: #555;
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
 		margin-bottom: 21px;
 	}
@@ -216,7 +216,7 @@ footer {
 		font-size: 12px;
 		line-height: 15px;
 		color: #999;
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		}
 		#content .tag-list a {
 			color: #999;
@@ -226,7 +226,7 @@ footer {
 		font-size: 12px;
 		line-height: 15px;
 		color: #555;
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
 	}
 		
@@ -239,7 +239,7 @@ footer {
 	}
 	#content .nav-pills > li > a {
 		font-size: 11px;
-		font-family: 'proxima nova', sans-serif;
+		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
 		color: #999;
 		margin-right: 36px;
@@ -296,7 +296,7 @@ footer {
 			font-size: 10px;
 			line-height: 13px;
 			color: #555;
-			font-family: 'proxima nova', sans-serif;
+			font-family: 'proxima-nova', sans-serif;
 			font-weight: 300;
 		}	
 		
@@ -374,7 +374,7 @@ footer {
 
 
 footer > p {
-	font-family: 'proxima nova', sans-serif;
+	font-family: 'proxima-nova', sans-serif;
 	font-weight: 400;
 	font-size: 12px;
 }		
