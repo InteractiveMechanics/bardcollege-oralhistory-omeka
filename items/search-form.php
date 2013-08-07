@@ -78,51 +78,6 @@ $formAttributes['method'] = 'GET';
     </div>
 
     <div class="field">
-        <?php echo $this->formLabel('collection-search', __('Search By Collection')); ?>
-        <div class="inputs">
-        <?php
-            echo $this->formSelect(
-                'collection',
-                @$_REQUEST['collection'],
-                array('id' => 'collection-search'),
-                get_table_options('Collection')
-            );
-        ?>
-        </div>
-    </div>
-
-    <div class="field">
-        <?php echo $this->formLabel('item-type-search', __('Search By Type')); ?>
-        <div class="inputs">
-        <?php
-            echo $this->formSelect(
-                'type',
-                @$_REQUEST['item-type-search'],
-                array('id' => 'item-type-search'),
-                get_table_options('ItemType')
-            );
-        ?>
-        </div>
-    </div>
-
-    <?php if(is_allowed('Users', 'browse')): ?>
-    <div class="field">
-    <?php
-        echo $this->formLabel('user-search', __('Search By User'));?>
-        <div class="inputs">
-        <?php
-            echo $this->formSelect(
-                'user',
-                @$_REQUEST['user'],
-                array('id' => 'user-search'),
-                get_table_options('User')
-            );
-        ?>
-        </div>
-    </div>
-    <?php endif; ?>
-
-    <div class="field">
         <?php echo $this->formLabel('tag-search', __('Search By Tags')); ?>
         <div class="inputs">
         <?php
@@ -132,7 +87,6 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
-
 
     <?php if (is_allowed('Items','showNotPublic')): ?>
     <div class="field">

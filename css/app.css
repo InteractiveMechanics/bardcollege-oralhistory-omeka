@@ -35,13 +35,13 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
 		display: block;
 	}
 	.banner h1 {
-		width: 55%;
+		width: 65%;
 		padding: 6px;
 		background: white;
 		background: rgba(255,255,255,.7);
 		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
-		font-size: 21px;
+		font-size: 24px;
 		text-transform: uppercase;
 		text-align: center;
 		top: 34px;
@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
 		text-align: center;
 		color: #FFF;
 		top: 40px;
+		letter-spacing: 1px;
 	}
 	.banner img {
 		position: absolute;
@@ -98,8 +99,8 @@ footer {
 			border-bottom: 1px solid #999999;
 		}
 		#sidebar .navigation > li > a {
-			padding: 12px 0;
-			font-size: 13px;
+			padding: 14px 0;
+			font-size: 15px;
 			display: block;
 			color: #666;
 		}
@@ -121,7 +122,7 @@ footer {
 			}
 			#sidebar .navigation > li > ul li a {
 				color: #999999;
-				font-size: 13px;
+				font-size: 15px;
 				display: block;
 				margin-top: -10px;
 				margin-bottom: 10px;
@@ -175,11 +176,12 @@ footer {
 		font-family: 'kepler-std-display', serif;
 		font-style: italic;
 		font-weight: 300;
+		letter-spacing: 1px;
 	}
 	#content .cols {
 		color: #555555;
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 17px;
 		-webkit-column-count: 2;
 		-moz-column-count: 2;
 		column-count: 2;
@@ -196,8 +198,8 @@ footer {
 				text-decoration: none;
 			}
 	#content h3 {
-		font-size: 15px;
-		line-height: 18px;
+		font-size: 17px;
+		line-height: 19px;
 		color: #555;
 		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
@@ -205,16 +207,16 @@ footer {
 	}
 	#content .description {
 		margin-top: 21px;
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 17px;
 		color: #555;
 		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
 		margin-bottom: 21px;
 	}
 	#content .tag-list {
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 17px;
 		color: #999;
 		font-family: 'proxima-nova', sans-serif;
 		}
@@ -223,8 +225,8 @@ footer {
 			font-weight: 700;
 		}
 	#content .interview {
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 17px;
 		color: #555;
 		font-family: 'proxima-nova', sans-serif;
 		font-weight: 300;
@@ -232,6 +234,9 @@ footer {
 		
 	#content hr {
 		border-top: 1px solid #999;
+	}
+	#content .interview img {
+	   margin: 10px;
 	}
 	
 #content .nav-tabs, .nav-pills {
@@ -265,13 +270,14 @@ footer {
 	#download .download .download-file {
 		text-indent: 40px;
 		font-size: 12px;
-		line-height: 15px;
+		line-height: 14px;
 		color: #555;
 		}
 		#download .download .download-file .download-icon {
 			background: url(../images/pdf_icon_small.gif) no-repeat;
-			width: 36px;
-			height: 36px;
+			background-size: 85%;
+			width: 32px;
+			height: 32px;
 			display: block;
 			float: left;
 			padding-right: 10px;
@@ -290,7 +296,15 @@ footer {
 			font-family: 'kepler-std-display', serif;
 			font-style: italic;
 			font-weight: 300;
-		}
+			line-height: 30px;
+			letter-spacing: 1px;
+		  }
+		  #browse-by-name .item h2:hover,
+		  #browse-by-name .item h2 a:hover {
+		      color: #363636;
+		      text-decoration: none;
+		  }
+		  
 		#browse-by-name .item h4 {
 			margin: 0;
 			font-size: 10px;
@@ -299,7 +313,7 @@ footer {
 			font-family: 'proxima-nova', sans-serif;
 			font-weight: 300;
 		}	
-		
+
 #browse-by-tags {}
 	#browse-by-tags .popularity {
 		list-style: none;
@@ -342,18 +356,47 @@ footer {
                 font-size:260%;
                 }
 
+#recent-items {
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    padding: 18px 0;
+    margin: 26px 0 18px;
+    color: #555555;
+	font-size: 14px;
+	line-height: 17px;
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
+	-webkit-column-gap: 18px;
+	-moz-column-gap: 18px;
+	column-gap: 18px;
+    }
+    #recent-items a {
+        clear: both;
+        display: block;
+        color: #555555;
+		}
+		#recent-items a:hover {
+			color: #363636;
+			text-decoration: underline;
+		}
+
 #advanced-search-form {}
 	#advanced-search-form label {
-		font-size: 12px;
-		line-height: 15px;
+		font-size: 14px;
+		line-height: 17px;
 		color: #555;
 	}
 	#advanced-search-form select {
 		margin-bottom: 18px;
 		margin-right: 5px;
+		border-radius: 0px;
+		border: 1px solid #999;
 	}
 	#advanced-search-form input[type="text"]{
 		margin-bottom: 18px;
+		border-radius: 0px;
+		border: 1px solid #999;
 	}
 	#advanced-search-form input[type="submit"] {
 		margin-top: 18px;
@@ -361,7 +404,7 @@ footer {
 		border-radius: 9px;
 		padding: 4px 8px;
 		background: white;
-		font-size: 12px;
+		font-size: 14px;
 	}
 	#advanced-search-form .add_search {
 		margin-bottom: 18px;
@@ -369,14 +412,17 @@ footer {
 		border-radius: 9px;
 		padding: 4px 8px;
 		background: white;
-		font-size: 12px;
+		font-size: 14px;
 	}
+	#advanced-form a {
+	   color: #555;
+    }
 
 
 footer > p {
 	font-family: 'proxima-nova', sans-serif;
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 14px;
 }		
 		
 		

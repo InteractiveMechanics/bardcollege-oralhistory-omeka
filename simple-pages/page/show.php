@@ -16,6 +16,19 @@
 	    }
 	    ?>
     </div>
+    <div id="recent-items">
+        <b>Recent Interviews</b>
+        <?php 
+            set_loop_records('items', get_recent_items(10));
+            if (has_loop_records('items')): 
+        ?>
+            <?php foreach (loop('items') as $item): ?>
+                <?php $elements = item_type_elements(); ?>
+                <?php echo link_to_item($elements['Interviewee']); ?>
+            <?php endforeach; ?>
+        <?php endif; ?>
+        <p class="view-items-link"><?php echo link_to_items_browse(__('All Interviews')); ?></p>
+    </div>
 </div>
 
 <?php echo foot(); ?>

@@ -2,10 +2,17 @@
 <?php include(physical_path_to('common/nav.php')); ?>
 
 <div id="content" class="span3">
-	<h1><?php echo metadata('item', array('Dublin Core', 'Contributor')); ?></h1>
-	<h3><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h3>
-	<h3><?php echo __('Conducted by'); ?> <?php echo metadata('item', array('Dublin Core', 'Creator')); ?> <?php echo __('on'); ?> <?php echo metadata('item', array('Dublin Core', 'Date')); ?></h3>
-	<h3><?php echo metadata('item', array('Dublin Core', 'Coverage')); ?></h3>
+    <?php $elements = item_type_elements(); ?>
+	<h1><?php echo metadata('item', array('Dublin Core', 'Title')); ?></h1>
+	<h3><?php echo $elements['Self-Given Occupation']; ?></h3>
+	<h3>
+	   <?php echo __('Conducted by'); ?> 
+	   <?php echo metadata('item', array('Dublin Core', 'Creator')); ?> 
+	   <?php echo __('on'); ?> 
+	   <?php echo metadata('item', array('Dublin Core', 'Date')); ?> 
+	   <?php echo __('at the'); ?> 
+	   <?php echo metadata('item', array('Dublin Core', 'Coverage')); ?>
+    </h3>
 	
 	<div class="description">
 		<?php echo metadata('item', array('Dublin Core', 'Description')); ?>
@@ -19,7 +26,6 @@
 	<hr/>
 	
 	<div class="interview">
-		<?php $elements = item_type_elements(); ?>
 		<?php echo $elements['Interview']; ?>
 	</div>
 	
@@ -29,7 +35,7 @@
 	<!-- The following returns all of the files associated with an item. -->
 	<?php if (metadata('item', 'has files')): ?>
 	<div class="download">
-		<?php echo files_for_item(); ?>
+	   <?php echo files_for_item(); ?>
 	</div>
 
 	<?php endif; ?>
