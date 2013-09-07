@@ -19,4 +19,12 @@ $(document).ready(function(){
             jQuery(option).remove();
         }
     });
+    
+    var listitems = $('#browse-by-name').find('.item').get();
+    listitems.sort(function(a, b) {
+        return $(a).attr('data-ordering-name').toUpperCase().localeCompare($(b).attr('data-ordering-name').toUpperCase());
+    })
+    $.each(listitems, function(idx, itm) { 
+        $('#browse-by-name > .row').append(itm); 
+    });
 });

@@ -36,34 +36,40 @@ $formAttributes['method'] = 'GET';
         //Here is where we actually build the search form
         foreach ($search as $i => $rows): ?>
             <div class="search-entry">
+                <label>
+                    <?php
+                    //The POST looks like =>
+                    // advanced[0] =>
+                    //[field] = 'description'
+                    //[type] = 'contains'
+                    //[terms] = 'foobar'
+                    //etc
+                    echo $this->formSelect(
+                        "advanced[$i][element_id]",
+                        @$rows['element_id'],
+                        array(),
+                        get_table_options('Element', null, array(
+                            'record_types' => array('Item', 'All'),
+                            'sort' => 'alphaBySet')
+                        )
+                    ); ?>
+                </label>
+                <label>
+                    <?php
+                    echo $this->formSelect(
+                        "advanced[$i][type]",
+                        @$rows['type'],
+                        array(),
+                        label_table_options(array(
+                            'contains' => __('contains'),
+                            'does not contain' => __('does not contain'),
+                            'is exactly' => __('is exactly'),
+                            'is empty' => __('is empty'),
+                            'is not empty' => __('is not empty'))
+                        )
+                    ); ?>
+                </label>
                 <?php
-                //The POST looks like =>
-                // advanced[0] =>
-                //[field] = 'description'
-                //[type] = 'contains'
-                //[terms] = 'foobar'
-                //etc
-                echo $this->formSelect(
-                    "advanced[$i][element_id]",
-                    @$rows['element_id'],
-                    array(),
-                    get_table_options('Element', null, array(
-                        'record_types' => array('Item', 'All'),
-                        'sort' => 'alphaBySet')
-                    )
-                );
-                echo $this->formSelect(
-                    "advanced[$i][type]",
-                    @$rows['type'],
-                    array(),
-                    label_table_options(array(
-                        'contains' => __('contains'),
-                        'does not contain' => __('does not contain'),
-                        'is exactly' => __('is exactly'),
-                        'is empty' => __('is empty'),
-                        'is not empty' => __('is not empty'))
-                    )
-                );
                 echo $this->formText(
                     "advanced[$i][terms]",
                     @$rows['terms'],
@@ -87,25 +93,6 @@ $formAttributes['method'] = 'GET';
         ?>
         </div>
     </div>
-
-    <?php if (is_allowed('Items','showNotPublic')): ?>
-    <div class="field">
-        <?php echo $this->formLabel('public', __('Public/Non-Public')); ?>
-        <div class="inputs">
-        <?php
-            echo $this->formSelect(
-                'public',
-                @$_REQUEST['public'],
-                array(),
-                label_table_options(array(
-                    '1' => __('Only Public Items'),
-                    '0' => __('Only Non-Public Items')
-                ))
-            );
-        ?>
-        </div>
-    </div>
-    <?php endif; ?>
 
     <?php fire_plugin_hook('public_items_search', array('view' => $this)); ?>
     <div>

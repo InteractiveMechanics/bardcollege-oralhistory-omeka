@@ -24,7 +24,7 @@
         ?>
             <?php foreach (loop('items') as $item): ?>
                 <?php $elements = item_type_elements(); ?>
-                <?php echo link_to_item($elements['Interviewee']); ?>
+                <?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?>
             <?php endforeach; ?>
         <?php endif; ?>
         <p class="view-items-link"><?php echo link_to_items_browse(__('All Interviews')); ?></p>

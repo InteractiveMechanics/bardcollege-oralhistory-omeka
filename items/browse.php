@@ -19,9 +19,10 @@
 			
 			<?php if ($total_results > 0): ?>
 				<div class="row">
-				<?php foreach (loop('items') as $item): ?>
+				<?php $items = loop('items'); ?>
+				<?php foreach ($items as $item): ?>
 					<?php $elements = item_type_elements(); ?>
-					<div class="item span1 columns">
+					<div class="item span1 columns" data-ordering-name="<?php echo $elements['Ordering Name']; ?>">
 					    <h2><?php echo link_to_item(metadata('item', array('Dublin Core', 'Title')), array('class'=>'permalink')); ?></h2>
 					    <h4><?php echo $elements['Display Occupation']; ?>, <?php echo $elements['Display Coverage']; ?></h4>
 					    <?php fire_plugin_hook('public_items_browse_each', array('view' => $this, 'item' =>$item)); ?>

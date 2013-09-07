@@ -123,9 +123,12 @@ footer {
 			#sidebar .navigation > li > ul li a {
 				color: #999999;
 				font-size: 15px;
-				display: block;
+				display: none;
 				margin-top: -10px;
 				margin-bottom: 10px;
+				}
+				#sidebar .navigation > li.active > ul li a {
+    				display: block;
 				}
 				#sidebar .navigation > li > ul li a:hover {
 					color: #555555;
@@ -266,6 +269,7 @@ footer {
 		
 #download .download {
 	position: relative;
+	top: 85px;
 	}
 	#download .download .download-file {
 		text-indent: 40px;
@@ -387,12 +391,65 @@ footer {
 		line-height: 17px;
 		color: #555;
 	}
-	#advanced-search-form select {
-		margin-bottom: 18px;
-		margin-right: 5px;
-		border-radius: 0px;
-		border: 1px solid #999;
-	}
+	#advanced-search-form .search-entry select {
+        padding: 0 0 0 8px;
+        margin: 0;
+        border-radius: 0;
+        background: #FFF;
+        color: #333;
+        border: none;
+        height: 28px;
+        outline: none;
+        display: inline-block;
+        font-size: 12px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        cursor: pointer;
+        line-height: 24px;
+    }
+    
+    /* Targetting Webkit browsers only. FF will show the dropdown arrow with so much padding. */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        #advanced-search-form .search-entry select { 
+            padding-right: 22px;
+        }
+    }
+    
+    #advanced-search-form .search-entry label {
+        position: relative;
+        display: inline-block;
+        border: 1px solid #999;
+        top: -9px;
+        }
+        #advanced-search-form .search-entry label:after {
+            content: '>';
+            font: 18px "Consolas", monospace;
+            color: #333;
+            -webkit-transform: rotate(90deg);
+            -moz-transform: rotate(90deg);
+            -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+            right: 12px;
+            top: 2px;
+            padding: 0 0 2px;
+            border-bottom: 1px solid #ddd;
+            position: absolute;
+            pointer-events: none;
+        }
+        #advanced-search-form .search-entry label:before {
+            content: '';
+            right: 1px;
+            top: 0px;
+            width: 28px;
+            height: 28px;
+            background: #FFF;
+            position: absolute;
+            pointer-events: none;
+            display: block;
+        }
+	
+	
 	#advanced-search-form input[type="text"]{
 		margin-bottom: 18px;
 		border-radius: 0px;
